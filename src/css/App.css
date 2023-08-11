@@ -1,0 +1,96 @@
+/* 각자 하셔도 됩니다:) */
+:root {
+  font-size: 15px;
+  font-family: "DM Sans";
+}
+.inner {
+  max-width: 1240px;
+  border: 1px solid #000;
+  width: calc(100% - 2rem);
+  margin: auto;
+}
+img {
+  width: 100%;
+}
+.headline {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+.headline h3 {
+  font-size: 24px;
+}
+.MainList ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.list {
+  width: calc(100% / 3 - 0.5rem);
+  margin-right: 0.7rem;
+}
+.list:nth-of-type(3n) {
+  margin-right: 0;
+}
+.imgCon {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.imgCon img {
+}
+.imgCon .discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: goldenrod;
+  height: 25px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 25px;
+  border-radius: 0 5px 5px 5px;
+}
+.imgCon .imgLabel {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  width: 100%;
+  background-color: lightgray;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  transition: 0.5s;
+}
+.list:hover .imgLabel {
+  bottom: 0;
+}
+/* Shop */
+.AllList {
+  display: flex;
+  justify-content: space-between;
+}
+.AllList .snb {
+  width: 18%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.AllList .snb li {
+  border: 2px solid goldenrod;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  transition: 0.35s;
+}
+.AllList .snb li:hover {
+  background-color: goldenrod;
+  color: #fff;
+}
+.AllList > .MainList {
+  width: 78%;
+}

@@ -1,0 +1,31 @@
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 120px;
+}
+.header nav {
+  display: flex;
+}
+.header nav .gnb {
+  border-right: 1px solid #eee;
+}
+.header nav .gnb a {
+  color: #232323;
+  padding: 0.5rem 2rem;
+  border: 1px solid #000;
+  transition: 0.5s;
+}
+.header nav .gnb a.on {
+  background-color: tomato;
+  color: #fff;
+}
+.header nav .icon {
+  margin-left: 1rem;
+}
+.header nav .icon a i {
+  border: 1px solid #000;
+}
