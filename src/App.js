@@ -2,6 +2,8 @@
 import "./css/App.css";
 import "./css/reset.css";
 import "./css/Header.css";
+import "./css/Blog.css";
+import "./css/OurStory.css";
 //library
 import {
   Route,
@@ -31,8 +33,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main data={data} />}></Route>
         <Route path="/Shop" element={<Shop data={data} />}></Route>
-        <Route path="/about" element={<div>어바웃</div>}></Route>
-        <Route path="/detail" element={<div>디테일</div>}></Route>
+        <Route path="/Blog" element={<Blog />}></Route>
+        <Route path="/OurStory" element={<OurStory />}></Route>
         <Route path="*" element={<div>404</div>}></Route>
       </Routes>
       {/* 푸터 영역 */}

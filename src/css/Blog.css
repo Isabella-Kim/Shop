@@ -1,0 +1,104 @@
+.BlogVisual {
+  width: 100%;
+  margin: auto;
+}
+.BlogVisual h1 {
+  text-align: center;
+  font-size: 33px;
+  margin: 2rem 0 0.2rem 0;
+}
+.BlogVisual p {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+.BlogDesc {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.BlogDesc > p {
+  padding: 5rem;
+  text-align: left;
+}
+
+.BlogDesc img {
+  width: 80%;
+}
+.BlogDesc h3 {
+  font-size: 26px;
+  text-align: left;
+  margin-top: 2rem;
+  margin-left: 10%;
+}
+.BlogDesc ol {
+  text-align: left;
+  margin-top: 0;
+  margin-left: 10%;
+  line-height: 30px;
+}
+.BlogDesc p:nth-of-type(2) {
+  padding: 0;
+  margin: 0.5rem;
+  margin-left: 10%;
+}
+.BlogShare {
+  margin: 2rem 5.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+.BlogShare .Share {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.BlogShare .Share b {
+  margin-right: 0.5rem;
+}
+.BlogShare .Share div a {
+  margin: 0 0.5rem;
+}
+.BlogReply {
+  margin: 2rem 5.5rem;
+}
+.BlogReply h2 {
+  font-size: 26px;
+  margin-bottom: 1rem;
+}
+.BlogReply p {
+  font-size: 16px;
+  color: #868686;
+}
+.BlogReply form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: left;
+}
+.BlogReply form input {
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+  margin: 2rem 0;
+}
+.BlogReply form input:nth-child(3) {
+  margin-bottom: 0;
+}
+.BlogReply form div {
+  margin-bottom: 2rem;
+}
+.BlogReply form div input {
+  margin-right: 0.5rem;
+}
+.BlogReply form textarea {
+  border: none;
+  border-bottom: 1px solid #d9d9d9;
+}
+.BlogReply form button {
+  width: 30%;
+  padding: 0.5rem 2rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  margin: 2rem 0;
+}
