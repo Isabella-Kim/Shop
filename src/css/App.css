@@ -94,3 +94,36 @@ img {
 .AllList > .MainList {
   width: 78%;
 }
+/* MainBanner */
+.imgCon {
+  margin-bottom: 2rem;
+}
+.imgCon > img {
+  position: relative;
+}
+.imgCon .imgText {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: #fff;
+}
+.imgCon .imgText h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.imgCon .imgText p {
+  padding: 0.8rem 0;
+}
+.imgCon .imgText a {
+  border: 1px solid #ffffff;
+  padding: 0.8rem 2rem;
+  margin-top: 2rem;
+  display: inline-block;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: 0.35s;
+}
+.imgCon .imgText a:hover {
+  background-color: goldenrod;
+  border: 1px solid transparent;
+}

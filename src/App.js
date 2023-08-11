@@ -26,16 +26,18 @@ import OurStory from "./component/OurStory";
 
 function App() {
   let [data] = useState(productData);
+  let urlName = useLocation().pathname;
+  console.log(urlName);
   return (
     <div className="App">
       {/* 헤더영역 */}
-      <Header className="header" />
+      <Header className="{urlName}" />
       <Routes>
         <Route path="/" element={<Main data={data} />}></Route>
         <Route path="/Shop" element={<Shop data={data} />}></Route>
         <Route path="/Blog" element={<Blog />}></Route>
         <Route path="/OurStory" element={<OurStory />}></Route>
-        <Route path="*" element={<div>404</div>}></Route>
+        <Route path="/Detail" element={<Detail data={data} />}></Route>
       </Routes>
       {/* 푸터 영역 */}
       <Footer className="footer" />

@@ -5,9 +5,26 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
-  //.gnb a에 마우스 올리면 on 클래스 추가
-
+function Header(props) {
+  // let bar = urlname === "/" ? "" : "bar";
+  // //.gnb a 클릭하면 클릭한 요소만 on 클래스 추가
+  // //모든 클래스 제거
+  // document.querySelectorAll(".gnb a").forEach((item) => {
+  //   item.classList.remove("on");
+  //   //현재 요소의 href속성이 urlname과 같으면
+  //   if (item.getAttribute("href") == urlname) {
+  //     //클래스 추가
+  //     item.classList.add("on");
+  //   }
+  // });
+  let bar = props.urlName;
+  let gnbA = document.querySelectorAll(".gnb a");
+  gnbA.forEach((item) => {
+    item.classList.remove("on");
+    if (item.getAttribute("href") == bar) {
+      item.classList.add("on");
+    }
+  });
   return (
     <header className="inner header">
       <Link to="/" className="logo">
