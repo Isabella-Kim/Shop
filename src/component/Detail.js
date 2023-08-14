@@ -1,14 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-//bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
+import ListCard from "./ListCard.js";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
 
 const Detail = ({ data }) => {
   let id = useParams;
   let item = data[id - 1];
+  //swiper에 사용할 dataList
+  //category 항목을 가지고있는 모든 data들을 가져옴
+  let dataList = data.filter((a) => a.category == item.category);
   return (
     <section className="Detail inner">
       <div className="DetailCon">
@@ -20,32 +24,20 @@ const Detail = ({ data }) => {
           <h2>가격</h2>
         </div>
       </div>
-      <div className="DetailTabs">
-        <Tabs
-          defaultActiveKey="profile"
-          id="uncontrolled-tab-example"
-          className="mb-3"
-        >
-          <Tab eventKey="home" title="Home">
-            Tab 01 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Temporibus quo blanditiis adipisci dolore aperiam ratione aliquam
-            soluta voluptatibus cupiditate. Reiciendis enim quo blanditiis ea
-            pariatur corporis, impedit molestiae necessitatibus. Eum.
-          </Tab>
-          <Tab eventKey="profile" title="Profile">
-            Tab 02
-          </Tab>
-          <Tab eventKey="contact" title="Contact">
-            Tab 03
-          </Tab>
-          <Tab eventKey="tab4" title="tab4">
-            Tab 04
-          </Tab>
-        </Tabs>
-      </div>
+      <div className="DetailTabs"></div>
       <div className="Swiper">
         <h1>Similar Items</h1>
-        <div>슬라이드</div>
+        <div>
+          <Swiper spaceBetween={50} slidesPerView={3}>
+            {dataList.map((item) => {
+              return (
+                <SwiperSlide key={item._id}>
+                  <ListCard item={item}></ListCard>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
       </div>
     </section>
   );
